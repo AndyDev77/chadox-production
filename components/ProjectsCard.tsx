@@ -4,7 +4,13 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 import { Badge } from "./ui/badge";
 
-const ProjectsCard = ({ project }) => {
+interface Project {
+  src: string;
+  category: string;
+  name: string;
+}
+
+const ProjectsCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <div>
       <Card className="bg-white group overflow-hidden relative">
