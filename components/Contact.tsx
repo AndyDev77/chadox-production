@@ -28,7 +28,7 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "template_hgo6g6e",
         {
           from_name: form.name,
-          to_name: "Andy Vespuce",
+          to_name: "Thomas Delangle",
           from_email: form.email,
           to_email: "andyparkersmith@hotmail.fr",
           message: form.message,

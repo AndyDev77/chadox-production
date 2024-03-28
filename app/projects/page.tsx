@@ -7,12 +7,11 @@ import ModalVideo from "react-modal-video";
 import "../modalVideo.scss";
 
 const uniqueCategories = [
-    "Tous",
-    ...new Set(ProjectsData.images.map((item) => item.category)),
-  ];
-  
+  "Tous",
+  ...new Set(ProjectsData.images.map((item) => item.category)),
+];
 
-const pageProjects = () => {
+const PageProjects = () => {
   const [categories, setCategories] = useState(uniqueCategories);
   const [category, setCategory] = useState("Tous");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,17 +21,15 @@ const pageProjects = () => {
     setIsModalOpen(true);
     setVideoSrc(src);
   };
-  
+
   const closeModal = () => {
     setIsModalOpen(false);
     setVideoSrc("");
   };
 
   const filteredProjects = ProjectsData.images.filter((project) => {
-    // if category is "tous les projets" retrun all projetcs else filter by category
     return category === "Tous" ? project : project.category === category;
   });
-
 
   return (
     <section className="min-h-screen pt-12">
@@ -71,11 +68,11 @@ const pageProjects = () => {
             isOpen={isModalOpen}
             url={videoSrc}
             onClose={closeModal}
-          /> 
+          />
         </Tabs>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default pageProjects
+export default PageProjects;
