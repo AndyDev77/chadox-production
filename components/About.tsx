@@ -1,10 +1,10 @@
 import { aboutData } from "@/constants";
-import { IoMdArrowForward } from "react-icons/io";
+// import { IoMdArrowForward } from "react-icons/io";
 
 const About = () => {
-  const { title, subtitle1, subtitle2, btnText } = aboutData;
+  const { title, subtitle1, subtitle2} = aboutData;
   return (
-    <section className="lg:py-16 xl:pb-[160px]">
+    <section className="lg:py-16 xl:pb-[160px]" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-[70px] items-center">
           <div className="flex flex-col lg:flex-row flex-1">
@@ -18,12 +18,12 @@ const About = () => {
               <div className="max-w-[530px] text-grey">
                 <p className="mb-6">{subtitle1}</p>
                 <p className="mb-9">{subtitle2}</p>
-                <button className="btn btn-lg btn-link">
+                {/* <button className="btn btn-lg btn-link">
                   {btnText}{" "}
                   <div className="text-xl">
                     <IoMdArrowForward />
                   </div>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

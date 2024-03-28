@@ -1,14 +1,14 @@
 "use client";
 
 import { interviewData } from "@/constants";
-import { useState } from "react";
-import ModalVideo from "react-modal-video";
-import "../app/modalVideo.scss";
-import { FaPlay } from "react-icons/fa";
+// import { useState } from "react";
+// import ModalVideo from "react-modal-video";
+// import "../app/modalVideo.scss";
+// import { FaPlay } from "react-icons/fa";
 
 const Interview = () => {
   const { title, btnText } = interviewData;
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   return (
     <section className="bg-dark section bg-interview bg-no-repeat bg-cover bg-center lg:h-[812px]">
@@ -18,7 +18,7 @@ const Interview = () => {
             <h3 className="text-white text-[40px] lg:text-[60px] leading-[1.1] font-tertiary -tracking-[1.5px] capitalize mb-8">
               {title}
             </h3>
-            <div>
+            {/* <div>
               <div
                 onClick={() => setIsOpen(true)}
                 className="flex text-white items-center gap-x-5 cursor-pointer hover:opacity-80 transition"
@@ -38,7 +38,7 @@ const Interview = () => {
               isOpen={isOpen}
               videoId="_l1mqYQuNf8"
               onClose={() => setIsOpen(false)}
-            />
+            /> */}
           </div>
         </div>
       </div>

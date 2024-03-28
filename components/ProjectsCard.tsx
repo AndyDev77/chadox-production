@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { Play } from "lucide-react";
@@ -8,12 +7,18 @@ interface Project {
   src: string;
   category: string;
   name: string;
+  video: string;
 }
 
-const ProjectsCard: React.FC<{ project: Project }> = ({ project }) => {
+interface ProjectsCardProps {
+  project: Project;
+  openModal: (src: string) => void;
+}
+
+const ProjectsCard: React.FC<ProjectsCardProps> = ({ project, openModal }) => {
   return (
-    <div>
-      <Card className="bg-white group overflow-hidden relative">
+    
+    <Card className="bg-white group overflow-hidden relative">
         <CardHeader className="p-0">
           <div className="relative w-full h-[300px] flex items-center justify-center bg-tertairy dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden">
             <Image
@@ -24,12 +29,11 @@ const ProjectsCard: React.FC<{ project: Project }> = ({ project }) => {
               alt="Images de projets récents"
               priority
             />
-            <Link
-              href="/"
-              className="bg-dark w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+            <button
+              className="bg-dark w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200" onClick={() => openModal(project.video)}
             >
               <Play className="text-white" />
-            </Link>
+            </button>
           </div>
         </CardHeader>
         <div className="h-full px-8 py-6">
@@ -38,8 +42,7 @@ const ProjectsCard: React.FC<{ project: Project }> = ({ project }) => {
           </Badge>
           <h4 className="h4 mb-1">{project.name}</h4>
         </div>
-      </Card>
-    </div>
+    </Card> 
   );
 };
 

@@ -3,9 +3,6 @@
 import { useEffect } from "react";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Copyright from "@/components/Copyright";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Interview from "@/components/Interview";
 import Projects from "@/components/Projects";
@@ -39,14 +36,12 @@ const Page = () => {
   };
   return (
     <main className="max-w-[1920px] mx-auto overflow-hidden bg-white">
-      <Header />
       <Hero />
       <About />
       <Projects />
       <Skills />
       <Interview />
       <Contact />
-      <Footer />
       <div
         id="scrollArrowUp"
         className="fixed bottom-5 right-5 hidden cursor-pointer bg-dark p-3"
@@ -54,7 +49,6 @@ const Page = () => {
       >
         <AiOutlineArrowUp className="h-8 w-8 text-white" />
       </div>
-      <Copyright />
     </main>
   );
 };

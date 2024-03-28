@@ -1,14 +1,14 @@
 export const headerData = {
-  logo: "/assets/img/header/logo.svg",
+  logo: "/assets/img/header/logo.gif",
 };
 
 export const navData = {
   items: [
     { path: "/", name: "Accueil" },
-    { path: "/", name: "A propos" },
-    { path: "/", name: "Projets" },
-    { path: "/", name: "Contact" },
-    { path: "/sign-in", name: "Connexion" },
+    { path: "#about", name: "A propos" },
+    { path: "/projects", name: "Projets" },
+    { path: "#contact", name: "Contact" },
+    // { path: "/sign-in", name: "Connexion" },
   ],
 };
 
@@ -31,8 +31,8 @@ export const sideBarData = [
 ];
 
 export const socialData = [
-  { href: "/", icon: "/assets/img/icons/instagram.svg" },
-  { href: "/", icon: "/assets/img/icons/linkedin.svg" },
+  { href: "https://www.instagram.com/chadox_production?igsh=eGdrcTc5NHhwM3ph", icon: "/assets/img/icons/instagram.svg", target: "_blank", },
+  // { href: "/", icon: "/assets/img/icons/linkedin.svg" },
 ];
 
 export const heroData = {
@@ -60,57 +60,49 @@ export const ProjectsData = {
       src: "/assets/img/gallery/audi.jpg",
       name: "Audi",
       category: "Première Pro",
-
-      // video: "/assets/video/PPRO/1.mp4",
+      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/coffre.jpg",
       name: "Coffre et Cartes",
       category: "After Effect",
-
-      // video: "/assets/video/AE/2.mp4",
+      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/main.jpg",
       name: "Main",
       category: "After Effect",
-
-      // video: "/assets/video/AE/3.mp4",
+      video: "https://player.vimeo.com/video/928322999?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/true.jpg",
       name: "True Detective",
       category: "After Effect",
-
-      // video: "/assets/video/AE/4.mp4",
+      video: "https://player.vimeo.com/video/928324697?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/garage.jpg",
       name: "Pub garage",
       category: "Première Pro",
-
-      // video: "/assets/video/PPRO/5.mp4",
+      video: "https://player.vimeo.com/video/928325720?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/amour.jpg",
       name: "VF amour pas simple",
       category: "Première Pro",
-
-      // video: "/assets/video/PPRO/6.mp4",
+      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/montre.jpg",
       name: "Montre",
       category: "Première Pro",
-
-      // video: "/assets/video/PPRO/7.mp4",
+      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/vans.jpg",
       name: "Pub Van",
       category: "Première Pro",
-
-      // video: "/assets/video/PPRO/8.mp4",
+      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
   ],
 };
@@ -139,12 +131,6 @@ export const contactData = {
       },
     },
   ],
-  form: {
-    name: "Votre nom et prénom",
-    email: "Votre adresse mail",
-    message: "Votre message",
-    btnText: "Envoyer",
-  },
 };
 
 export const footerData = {
@@ -166,9 +152,9 @@ export const footerData = {
     title: "Site internet",
     items: [
       { href: "/", name: "Accueil" },
-      { href: "/", name: "A propos" },
+      { href: "#about", name: "A propos" },
       { href: "/", name: "Projets" },
-      { href: "/", name: "Contact" },
+      { href: "#contact", name: "Contact" },
     ],
   },
   program: {
