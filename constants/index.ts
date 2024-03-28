@@ -66,7 +66,7 @@ export const ProjectsData = {
       src: "/assets/img/gallery/coffre.jpg",
       name: "Coffre et Cartes",
       category: "After Effect",
-      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      video: "https://player.vimeo.com/video/928383551?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/main.jpg",
@@ -90,19 +90,19 @@ export const ProjectsData = {
       src: "/assets/img/gallery/amour.jpg",
       name: "VF amour pas simple",
       category: "Première Pro",
-      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      video: "https://player.vimeo.com/video/928385356?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
       src: "/assets/img/gallery/montre.jpg",
       name: "Montre",
       category: "Première Pro",
-      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      video: "https://player.vimeo.com/video/928382336?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
     {
-      src: "/assets/img/gallery/vans.jpg",
-      name: "Pub Van",
-      category: "Première Pro",
-      video: "https://player.vimeo.com/video/928310629?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      src: "/assets/img/gallery/logoMoissy.png",
+      name: "Moissy Strat-et-Jeux",
+      category: "After Effect",
+      video: "https://player.vimeo.com/video/928387869?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
     },
   ],
 };
