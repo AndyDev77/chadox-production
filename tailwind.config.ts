@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { withUt } from "uploadthing/tw";
 
 const config = {
   content: [
@@ -33,13 +34,13 @@ const config = {
         },
       },
       backgroundImage: {
-        hero: "url('/assets/img/hero/bg.jpg')",
-        about: "url('/assets/img/about/image.png')",
-        interview: "url('/assets/img/interview/bg.png')",
+        hero: "url('/img/hero/bg.jpg')",
+        about: "url('/img/about/image.png')",
+        interview: "url('/img/interview/bg.png')",
       },
     },
   },
   plugins: [],
 } satisfies Config;
 
-export default config;
+export default withUt(config);
