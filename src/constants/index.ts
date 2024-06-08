@@ -31,6 +31,10 @@ export const navDataConnect = [
     route: "/events/create",
   },
   {
+    label: "Projets",
+    route: "/projects",
+  },
+  {
     label: "Mon Profile",
     route: "/profile",
   },

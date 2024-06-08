@@ -44,6 +44,7 @@ export async function createEvent({ userId, event, path }: CreateEventParams) {
 
     return JSON.parse(JSON.stringify(newEvent));
   } catch (error) {
+    console.log(error);
     handleError(error);
   }
 }
