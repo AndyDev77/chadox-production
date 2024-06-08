@@ -195,3 +195,16 @@ export const footerData = {
     items: [{ name: "Lundi - Mardi: 10h-17h " }, { name: "Mercredi - Vendredi: 13h-18h " }],
   },
 };
+
+export const eventDefaultValues = {
+  title: "",
+  description: "",
+  location: "",
+  imageUrl: "",
+  startDateTime: new Date(),
+  endDateTime: new Date(),
+  categoryId: "",
+  price: "",
+  isFree: false,
+  url: "",
+};

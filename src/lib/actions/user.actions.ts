@@ -6,6 +6,7 @@ import { connectToDatabase } from "@/lib/database";
 import Event from "@/lib/database/models/event.model";
 import User from "@/lib/database/models/user.model";
 import { handleError } from "@/lib/utils";
+
 import { CreateUserParams, UpdateUserParams } from "@/types";
 
 export async function createUser(user: CreateUserParams) {
@@ -36,9 +37,7 @@ export async function updateUser(clerkId: string, user: UpdateUserParams) {
   try {
     await connectToDatabase();
 
-    const updatedUser = await User.findOneAndUpdate({ clerkId }, user, {
-      new: true,
-    });
+    const updatedUser = await User.findOneAndUpdate({ clerkId }, user, { new: true });
 
     if (!updatedUser) throw new Error("User update failed");
     return JSON.parse(JSON.stringify(updatedUser));

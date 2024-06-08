@@ -1,3 +1,4 @@
+// middleware.ts
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const isPublicRoute = createRouteMatcher([
@@ -6,10 +7,11 @@ const isPublicRoute = createRouteMatcher([
   "/",
   "/events/:id",
   "/api/webhook/clerk",
-  "api/uploadthing",
+  "/api/uploadthing",
 ]);
 
 export default clerkMiddleware((auth, req) => {
+  console.log("Middleware is being applied to:", req.url); // Add this line
   if (!isPublicRoute(req)) auth().protect();
 });
 
