@@ -1,60 +1,60 @@
-"use client";
-
 import About from "@/components/About";
+import CategoryFilter from "@/components/CategoryFilter";
+import Collection from "@/components/Collection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Interview from "@/components/Interview";
-import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
+import Search from "@/components/Search";
 import Skills from "@/components/Skills";
-import { ArrowUp } from "lucide-react";
-import { useEffect } from "react";
+import { getAllEvents } from "@/lib/actions/event.actions";
+import { SearchParamProps } from "@/types";
 
-const Page = () => {
-  useEffect(() => {
-    const scrollArrowUp = document.getElementById("scrollArrowUp");
+export default async function Home({ searchParams }: SearchParamProps) {
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || "";
+  const category = (searchParams?.category as string) || "";
 
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        scrollArrowUp?.classList.remove("hidden");
-      } else {
-        scrollArrowUp?.classList.add("hidden");
-      }
-    };
+  const events = await getAllEvents({
+    query: searchText,
+    category,
+    page,
+    limit: 6,
+  });
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
   return (
     <main className="max-w-[1920px] mx-auto overflow-hidden bg-white">
-      <Navbar />
       <Hero />
       <About />
-      <Projects />
+      <section id="events" className="bg-dotted-pattern w-full my-8 ">
+        <div className="wrapper flex flex-col gap-8 md:gap-12 ">
+          <h2 className="h2-bold">
+            {" "}
+            <br />
+            <br />
+            Mes projets
+          </h2>
+
+          <div className="flex w-full flex-col gap-5 md:flex-row">
+            <Search />
+            <CategoryFilter />
+          </div>
+
+          <Collection
+            data={events?.data}
+            emptyTitle="Aucunes vidéos trouvées"
+            emptyStateSubtext="Revenez plus tard"
+            collectionType="All_Events"
+            limit={6}
+            page={page}
+            totalPages={events?.totalPages}
+          />
+        </div>
+      </section>
       <Skills />
       <Interview />
       <Contact />
       <Footer />
-      <div
-        id="scrollArrowUp"
-        className="fixed bottom-5 right-5 hidden cursor-pointer bg-dark p-3"
-        onClick={scrollToTop}
-      >
-        <ArrowUp color="white" className="h-8 w-8" />
-      </div>
     </main>
   );
-};
-
-export default Page;
+}

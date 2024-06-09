@@ -30,10 +30,10 @@ export const navDataConnect = [
     label: "Ajouter une vidéo",
     route: "/events/create",
   },
-  {
-    label: "Projets",
-    route: "/projects",
-  },
+  // {
+  //   label: "Projets",
+  //   route: "/projects",
+  // },
   {
     label: "Mon Profile",
     route: "/profile",

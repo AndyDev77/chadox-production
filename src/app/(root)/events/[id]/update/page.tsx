@@ -1,6 +1,6 @@
 import EventForm from "@/components/EventForm";
 import { getEventById } from "@/lib/actions/event.actions";
-import { auth } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs";
 
 type UpdateEventProps = {
   params: {

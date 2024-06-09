@@ -1,3 +1,5 @@
+"use client";
+
 import { contactData } from "@/constants";
 import useAlert from "@/hooks/useAlert";
 import emailjs from "@emailjs/browser";

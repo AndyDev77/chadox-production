@@ -2,7 +2,7 @@ import Collection from "@/components/Collection";
 import { Button } from "@/components/ui/button";
 import { getEventsByUser } from "@/lib/actions/event.actions";
 import { SearchParamProps } from "@/types";
-import { auth } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs";
 import Link from "next/link";
 
 const ProfilePage = async ({ searchParams }: SearchParamProps) => {

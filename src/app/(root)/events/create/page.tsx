@@ -1,6 +1,6 @@
 // pages/create-event.tsx
 import EventForm from "@/components/EventForm";
-import { auth } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs";
 
 const CreateEvent = () => {
   const { sessionClaims } = auth();
